@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="button" value="百度一下" id="bt-baidu" />
+  <input type="button" value="go" id="go" />
+  <input type="button" value="back" id="back" />
+  <input type="button" value="go" id="open" />
+  <input type="button" value="back" id="close" />
+</body>
+<script>
+  function $(id) {
+    return document.getElementById(id)
+  }
+
+  $("btn-baidu")
+    .onclick = function () {
+      location.href = "http://www.baidu.com";
+    }
+  $("go")
+    .onclick = function () {
+      history.go(1)
+    }
+
+  $("back")
+    .onclick = function () {
+      history.go(-1)
+    }
+
+  $("open").onclick = function () {
+    window.open("http://www.baidu.com", "", "width=400px,height=100px")
+  }
+
+  $("close").onclick = function () {
+    window.close()
+  }
+
+</script>
+
+</html>

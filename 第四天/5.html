@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>哈哈1</h1>
+  <h1>哈哈2</h1>
+  <h1 name='zs'>哈哈3</h1>
+  <h1>哈哈4</h1>
+  <h1 name="zs">哈哈5</h1>
+  <h1 class="YD">哈哈6</h1>
+  <h1 class="YD">哈哈7</h1>
+  <h1 class="YD">哈哈8</h1>
+  <h1>哈哈9</h1>
+  <h1>哈哈10</h1>
+</body>
+<script>
+  var z = document.getElementsByName("zs")
+  for (let i = 0; i < z.length; i++) {
+    z[i].style.color = 'red'
+
+  }
+
+  var z = document.getElementsByClassName("YD")
+  for (let i = 0; i < z.length; i++) {
+    z[i].innerHTML = '哈哈哈哈'
+    0
+  }
+</script>
+
+</html>
