@@ -7,8 +7,33 @@
   <title>Document</title>
 </head>
 <body>
-  <h1></h1>
-  <h1></h1>
-  <h1></h1>
+
 </body>
+<script>
+  var obj1={
+    name:'陈素华',
+    age:20,
+    sex:'女',
+    address:'私闯梁山',
+    sing:function(){
+      document.write("伤心总是难免的！<br>")
+    }
+  }
+  var obj2={
+    name:'慈禧太后',
+    age:120,
+    sex:'女',
+    address:'北京故宫',
+    sing:function(){
+      document.write("故宫博物馆<br>")
+    }
+  }
+  document.write(obj2.name+'<br>')
+  obj2.sing()
+  //3.转变成字符串
+  var str2 = JSON.stringify(obj2)
+  document.write(str2+"<br>")
+  var obj3 = JSON.parse(str2)
+  document.write(obj3.name)
+</script>
 </html>
