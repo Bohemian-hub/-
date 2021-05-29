@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #msg {
+      height: 600px;
+      width: 400px;
+      border: 1px solid red;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    #btn-send {
+      height: 20px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="msg"></div>
+  <input type="button" value="发送" id="btn-send">
+  <a href="3.txt"></a>
+  <input type="text">
+</body>
+<script>
+  function $(id) {
+    return document.getElementById(id)
+  }
+
+  $("btn-send").onclick = function () {
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "3.txt")
+    xhr.send()
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var obj = JSON.parse(xhr.responseText)
+        for (let j = 0; j < obj.length; j++) {
+          $("msg").innerHTML += j + 1 + "<br>"
+          for (let i in obj[j]) {
+            $("msg").innerHTML += i + ":" + obj[j][i] + "<br>"
+          }
+
+        }
+
+
+      }
+    }
+  }
+</script>
+
+</html>
