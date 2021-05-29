@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>大家好</h1>
+  <div id="neirong"></div>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+</body>
+<script>
+  var xhr = new XMLHttpRequest()
+  xhr.open("get", "./1.txt")
+  xhr.send()
+
+  xhr.onreadystatechange = function yibu() {
+    console.log("发生了变化");
+    console.log(xhr.readyState);
+    if (xhr.readyState == 4) {
+/*       console.log("老板回来处理！");
+      var txt = xhr.responseText;
+      console.log(txt);
+      document.getElementById("neirong").innerHTML = txt
+     */
+    console.log("1.老板回来吃饭了！");
+    console.log("2."+xhr.responseText);
+    }
+  }
+
+  console.log("3。做其他事");
+</script>
+
+</html>
