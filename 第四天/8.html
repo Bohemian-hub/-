@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #sdsd {
+      font-size: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sdsd"></div>
+</body>
+<script>
+  document.write("<br/>------------------<br/>")
+  document.write(Math.floor((Math.random() * 100) + 1))
+
+  document.write("<br/>------------------<br/>")
+  document.write(Math.pow(3, 5))
+
+  document.write("<br/>------------------<br/>")
+  document.write(Math.pow(3, 1 / 2))
+
+  document.write("<br/>------------------<br/>")
+  document.write(100 + Math.floor((Math.random() * 100) + 1))
+
+  document.write("<br/>------------------<br/>")
+  document.write(Math.floor(Math.random() * 20 + 80))
+
+  document.write("<br/>------------------<br/>")
+  const a = [1, 85, 5, 5, 416, 6, , 5, 416, 416, 416, 416, 416, 14, 6]
+  function sortNumber(a, b) {
+    return a - b
+  }
+  document.write(a.sort(sortNumber))
+  document.write("<br/>------------------<br/>")
+  document.write(a.reverse(sortNumber))
+  document.write("<br/>------------------<br/>")
+  let t = [32, 45, 67, 39]
+  document.write(t.sort(sortNumber))
+  document.write("<br/>------------------<br/>")
+  document.write(t.reverse(sortNumber))
+  document.write("<br/>------------------<br/>")
+
+  var ea = [2, 4, 5, 2, 5, 2, 5, 4]
+  document.write(ea.length)
+  document.write("<br/>----------0--------<br/>")
+
+  ea.shift(2)
+  document.write(ea)
+  document.write("<br/>---------1---------<br/>")
+  document.write(ea.length)
+  document.write("<br/>----------1--------<br/>")
+  ea.pop(2)
+  document.write(ea)
+  document.write("<br/>----------2--------<br/>")
+  document.write(ea.length)
+  document.write("<br/>----------2--------<br/>")
+  ea.unshift(2)
+  document.write(ea)
+  document.write("<br/>-----------3-------<br/>")
+  document.write(ea.length)
+  document.write("<br/>-----------3-------<br/>")
+  ea.push(2)
+  document.write(ea)
+  document.write("<br/>----------4--------<br/>")
+  document.write(ea.length)
+  document.write("<br/>----------00000--------<br/>")
+  document.write(ea)
+  ea.toString().replace(ea[3], 7)
+  ea.toString().replace(ea[4], 8)
+  ea.toString().replace(ea[5], 9)
+  ea.toString().replace(ea[6], 10)
+  document.write("<br/>----------00000--------<br/>")
+  document.write("<br/>----------00000--------<br/>")
+  document.write(ea)
+  document.write("<br/>----------00000--------<br/>")
+
+  ea.splice(2, 4, 7, 8, 9, 10, 10)
+  var abc = '张三 李四 王五 赵六 红旗'
+  document.write(abc.split(' '))
+
+  var cc = '财经学院是全国一六学院，人人都想去财经学院'
+  document.write("<br/>----------00000--------<br/>")
+  document.write(cc.replace(/财经/g, '西昌'))
+  document.write("<br/>----------00000--------<br/>")
+  setInterval(() => {
+    var today = new Date();
+    var month = today.getMonth() + 1
+    var daly = today.getDate()
+    var h = today.getHours();       //获取当前小时数(0-23)
+    var m = today.getMinutes();     //获取当前分钟数(0-59)
+    var tt = today.getSeconds()     //获取当前分钟数(0-59)
+    if (daly < 10) {
+      daly = "0" + String(daly)
+    }
+    if (month < 10) {
+      month = "0" + String(month)
+    }
+    if (h < 10) {
+      h = "0" + String(h)
+    }
+    if (m < 10) {
+      m = "0" + String(m)
+    }
+    if (tt < 10) {
+      tt = "0" + String(tt)
+    }
+    var today_date = today.getFullYear() + '-' + month + '-' + daly + ' ' + h + ':' + m + ':' + tt
+    document.getElementById('sdsd').innerHTML = today_date
+  }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+  document.write("<br/><br/><br/><br/><br/><br/><br/>")
+  document.write("<br/><br/><br/><br/><br/><br/><br/>")
+  document.write("<br/><br/><br/><br/><br/><br/><br/>")
+  document.write("<br/><br/><br/><br/><br/><br/><br/>")
+  document.write("<br/><br/><br/><br/><br/><br/><br/>")
+  document.write("<br/><br/><br/><br/><br/><br/><br/>")
+</script>
+
+</html>
