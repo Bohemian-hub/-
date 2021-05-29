@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var obj4={
+        "name":"开心1",
+        "sex":"男",
+        "sing":function(){
+            document.write("伤心总是难免的！<br>")
+        }
+    }
+
+    var str4=JSON.stringify(obj4);
+    document.write(str4+"<br>")
+    var obj= JSON.parse(str4)
+    console.log(obj);
+</script>
+</html>
